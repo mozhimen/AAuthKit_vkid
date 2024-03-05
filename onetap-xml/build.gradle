@@ -31,8 +31,11 @@ android {
 
 dependencies {
     implementation project(':SwiftKit:basick')
+    implementation project(':SwiftKit:composek')
     implementation project(':vkid_basic')
+    implementation project(':vkid_common')
     implementation project(':onetap-compose')
+    implementation project(':onetap-common')
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

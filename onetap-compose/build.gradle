@@ -21,11 +21,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
 }
 
@@ -33,9 +33,12 @@ dependencies {
 
     implementation project(':SwiftKit:basick')
     implementation project(':SwiftKit:composek')
+    implementation project(':AComposeKit:imagek')
     implementation project(':vkid_basic')
     implementation project(':vkid_common')
     implementation project(':onetap-common')
+    implementation project(':multibranding-common')
+    implementation project(':multibranding-compose')
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

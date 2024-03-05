@@ -28,10 +28,22 @@ include ':vkid_common'
 include ':onetap-xml'
 include ':onetap-compose'
 include ':onetap-common'
+include ':multibranding-common'
+
 //SwiftKit
 include ':SwiftKit'
 project(':SwiftKit').projectDir = new File("C:\\Users\\${System.getenv().get("USERNAME")}\\Documents\\GitHub\\SwiftKit")
 include ':SwiftKit:basick'
 include ':SwiftKit:uicorek'
 include ':SwiftKit:composek'
-include ':multibranding-common'
+//AComposeKit
+include ':AComposeKit'
+project(':AComposeKit').projectDir = new File("D:\\Workspace\\GitHub\\AComposeKit")
+include ':AComposeKit:imagek'
+//AImageKit
+include ':AImageKit'
+project(':AImageKit').projectDir = new File("D:\\Workspace\\GitHub\\AImageKit")
+include ':AImageKit:imagek_glide_compose'
+include ':AImageKit:imagek_glide'
+include ':multibranding-compose'
+include ':multibranding-xml'

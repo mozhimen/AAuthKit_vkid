@@ -1,5 +1,6 @@
 package com.vk.id.onetap.compose.onetap.style
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.Modifier
@@ -7,6 +8,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.vk.id.onetap.common.button.style.OneTapButtonSizeStyle
 
+@SuppressLint("ModifierFactoryUnreferencedReceiver")
 @Suppress("CyclomaticComplexMethod", "MagicNumber")
 internal fun Modifier.iconPadding(
     style: OneTapButtonSizeStyle
@@ -32,6 +34,7 @@ internal fun OneTapButtonSizeStyle.iconPadding() = when (this) {
     OneTapButtonSizeStyle.LARGE_56 -> 14
 }.dp
 
+@SuppressLint("ModifierFactoryUnreferencedReceiver")
 internal fun Modifier.height(style: OneTapButtonSizeStyle): Modifier {
     return height(style.heightDp().dp)
 }

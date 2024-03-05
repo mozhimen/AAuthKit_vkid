@@ -8,6 +8,7 @@ import com.vk.id.common.InternalVKIDApi
 import com.vk.id.onetap.common.icon.style.VKIconColorStyle
 import com.vk.id.onetap.compose.R
 
+@OptIn(InternalVKIDApi::class)
 @Composable
 @DrawableRes
 internal fun VKIconColorStyle.asPainterResource() = when (this) {

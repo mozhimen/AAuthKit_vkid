@@ -32,7 +32,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import coil.compose.AsyncImage
+import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
+import com.mozhimen.composek.imagek.ImageKGlide
 import com.vk.id.VKID
 import com.vk.id.VKIDUser
 import com.vk.id.common.InternalVKIDApi
@@ -324,6 +325,7 @@ private fun TextBox(
 }
 
 @Composable
+@OptIn(ExperimentalGlideComposeApi::class)
 private fun RightIconBox(
     state: VKIDButtonState,
     style: VKIDButtonStyle,
@@ -343,7 +345,7 @@ private fun RightIconBox(
         if (state.inProgress) {
             CircleProgress(style.progressStyle)
         } else if (state.userIconUrl != null) {
-            AsyncImage(
+            ImageKGlide(
                 model = state.userIconUrl,
                 contentDescription = null,
                 modifier = Modifier.clip(CircleShape),

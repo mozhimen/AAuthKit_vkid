@@ -1,5 +1,6 @@
 package com.vk.id.onetap.compose.onetap.sheet.style
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.background
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
@@ -11,6 +12,7 @@ internal enum class OneTapSheetBackgroundStyle {
     DARK,
 }
 
+@SuppressLint("ModifierFactoryUnreferencedReceiver")
 internal fun Modifier.background(style: OneTapSheetBackgroundStyle) = composed {
     val backgroundResource = when (style) {
         OneTapSheetBackgroundStyle.LIGHT -> R.color.vkid_white

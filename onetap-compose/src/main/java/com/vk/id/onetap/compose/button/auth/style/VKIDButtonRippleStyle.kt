@@ -1,4 +1,4 @@
-@file:OptIn(InternalVKIDApi::class)
+@file:OptIn(InternalVKIDApi::class, InternalVKIDApi::class)
 
 package com.vk.id.onetap.compose.button.auth.style
 

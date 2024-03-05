@@ -1,5 +1,6 @@
 package com.vk.id.onetap.compose.button.alternate.style
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.background
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
@@ -8,6 +9,7 @@ import com.vk.id.common.InternalVKIDApi
 import com.vk.id.onetap.common.alternate.style.AlternateAccountButtonBackgroundStyle
 import com.vk.id.onetap.compose.R
 
+@SuppressLint("ModifierFactoryUnreferencedReceiver")
 @OptIn(InternalVKIDApi::class)
 internal fun Modifier.background(style: AlternateAccountButtonBackgroundStyle) = composed {
     val backgroundResource = when (style) {

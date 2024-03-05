@@ -28,8 +28,9 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
-import coil.compose.AsyncImage
-import coil.decode.DataSource
+import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
+import com.bumptech.glide.load.DataSource
+import com.mozhimen.composek.imagek.ImageKGlide
 import com.vk.id.VKID
 import com.vk.id.VKIDUser
 import com.vk.id.common.InternalVKIDApi
@@ -136,6 +137,7 @@ private fun SmallButtonAnimation(
 }
 
 @Composable
+@OptIn(ExperimentalGlideComposeApi::class)
 private fun SmallButtonContent(
     state: VKIDSmallButtonState,
     style: VKIDButtonStyle,
@@ -157,7 +159,7 @@ private fun SmallButtonContent(
                 style = style.iconStyle
             )
 
-            AsyncImage(
+            ImageKGlide(
                 model = state.userIconUrl,
                 contentDescription = null,
                 modifier = Modifier
@@ -172,7 +174,7 @@ private fun SmallButtonContent(
                 },
                 onSuccess = {
                     state.userIconLoading = false
-                    if (it.result.dataSource != DataSource.MEMORY_CACHE) {
+                    if (it.dataSource != DataSource.MEMORY_CACHE) {
                         state.userIconLoaded = true
                     }
                 }

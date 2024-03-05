@@ -2,6 +2,7 @@
 
 package com.vk.id.onetap.compose.button.auth.style
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.background
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
@@ -10,6 +11,7 @@ import com.vk.id.common.InternalVKIDApi
 import com.vk.id.onetap.common.auth.style.VKIDButtonBackgroundStyle
 import com.vk.id.onetap.compose.R
 
+@SuppressLint("ModifierFactoryUnreferencedReceiver")
 internal fun Modifier.background(style: VKIDButtonBackgroundStyle) = composed {
     val backgroundResource = when (style) {
         VKIDButtonBackgroundStyle.BLUE -> R.color.vkid_azure_A100

@@ -2,6 +2,7 @@
 
 package com.vk.id.onetap.compose.button
 
+import android.annotation.SuppressLint
 import androidx.compose.animation.core.AnimationSpec
 import androidx.compose.animation.core.CubicBezierEasing
 import androidx.compose.animation.core.tween
@@ -32,6 +33,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
+@SuppressLint("ModifierFactoryUnreferencedReceiver")
 @Suppress("LongParameterList")
 internal fun Modifier.clickable(
     style: VKIDButtonStyle,
