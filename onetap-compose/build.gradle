@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.vk.id.onetap.compose'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         minSdk 19
@@ -33,7 +33,7 @@ dependencies {
 
     implementation project(':SwiftKit:basick')
     implementation project(':SwiftKit:composek')
-    implementation project(':AComposeKit:imagek')
+    implementation project(':AImageKit_Coil:imagek_coil_compose')
     implementation project(':vkid_basic')
     implementation project(':vkid_common')
     implementation project(':onetap-common')

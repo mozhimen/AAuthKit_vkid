@@ -2,6 +2,7 @@
 
 package com.vk.id.onetap.compose.icon
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.size
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -11,11 +12,10 @@ import com.vk.id.onetap.common.icon.style.VKIconSizeStyle
 private const val VK_ICON_SMALL_SIZE_DP = 24
 private const val VK_ICON_NORMAL_SIZE_DP = 28
 
-@OptIn(InternalVKIDApi::class)
 internal fun VKIconSizeStyle.asIconSize(): Int = when (this) {
     VKIconSizeStyle.SMALL -> VK_ICON_SMALL_SIZE_DP
     VKIconSizeStyle.NORMAL -> VK_ICON_NORMAL_SIZE_DP
 }
 
-@OptIn(InternalVKIDApi::class)
+@SuppressLint("ModifierFactoryUnreferencedReceiver")
 internal fun Modifier.size(style: VKIconSizeStyle) = size(style.asIconSize().dp)

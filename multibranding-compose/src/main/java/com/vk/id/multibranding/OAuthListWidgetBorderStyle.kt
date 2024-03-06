@@ -14,7 +14,6 @@ import com.vk.id.multibranding.common.style.OAuthListWidgetBorderStyle
 import com.vk.id.multibranding.common.style.OAuthListWidgetCornersStyle
 
 @SuppressLint("ModifierFactoryUnreferencedReceiver")
-@OptIn(InternalVKIDApi::class)
 internal fun Modifier.border(
     style: OAuthListWidgetBorderStyle,
     cornersStyle: OAuthListWidgetCornersStyle,

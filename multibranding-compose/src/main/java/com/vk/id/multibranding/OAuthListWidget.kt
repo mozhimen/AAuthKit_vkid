@@ -1,4 +1,4 @@
-@file:OptIn(ExperimentalStdlibApi::class)
+@file:OptIn(InternalVKIDApi::class)
 
 package com.vk.id.multibranding
 
@@ -147,7 +147,6 @@ private fun OAuthTitle() = BasicText(
     )
 )
 
-@OptIn(InternalVKIDApi::class)
 @Suppress("LongParameterList")
 @Composable
 private fun OAuthButton(
@@ -300,7 +299,6 @@ private fun OAuthListImage(
         .height(style.sizeStyle.iconSize()),
 )
 
-@OptIn(InternalVKIDApi::class)
 @Composable
 private fun OAuthListText(
     modifier: Modifier,

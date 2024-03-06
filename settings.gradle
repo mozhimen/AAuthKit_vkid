@@ -29,21 +29,16 @@ include ':onetap-xml'
 include ':onetap-compose'
 include ':onetap-common'
 include ':multibranding-common'
-
-//SwiftKit
-include ':SwiftKit'
-project(':SwiftKit').projectDir = new File("C:\\Users\\${System.getenv().get("USERNAME")}\\Documents\\GitHub\\SwiftKit")
-include ':SwiftKit:basick'
-include ':SwiftKit:uicorek'
-include ':SwiftKit:composek'
-//AComposeKit
-include ':AComposeKit'
-project(':AComposeKit').projectDir = new File("D:\\Workspace\\GitHub\\AComposeKit")
-include ':AComposeKit:imagek'
-//AImageKit
-include ':AImageKit'
-project(':AImageKit').projectDir = new File("D:\\Workspace\\GitHub\\AImageKit")
-include ':AImageKit:imagek_glide_compose'
-include ':AImageKit:imagek_glide'
 include ':multibranding-compose'
 include ':multibranding-xml'
+//SwiftKit
+include ':SwiftKit'
+project(':SwiftKit').projectDir = new File("D:\\Workspace\\GitHub\\SwiftKit")
+include ':SwiftKit:basick'
+include ':SwiftKit:xmlk'
+include ':SwiftKit:composek'
+//AImageKit
+include ':AImageKit_Coil'
+project(':AImageKit_Coil').projectDir = new File("D:\\Workspace\\GitHub\\AImageKit_Coil")
+include ':AImageKit_Coil:imagek_coil'
+include ':AImageKit_Coil:imagek_coil_compose'

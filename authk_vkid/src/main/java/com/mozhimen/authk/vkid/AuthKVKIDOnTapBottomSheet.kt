@@ -9,6 +9,7 @@ import com.mozhimen.basick.elemk.androidx.lifecycle.bases.BaseWakeBefDestroyLife
 import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
 import com.mozhimen.basick.lintk.optins.OApiCall_BindViewLifecycle
 import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
+import com.vk.id.onetap.xml.OneTapBottomSheet
 
 /**
  * @ClassName AuthKVKIDOnTapBottomSheet
