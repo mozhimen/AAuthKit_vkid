@@ -1,4 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <queries>
+        <!-- For available browsers request -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+        <!-- For auth with vk client -->
+        <intent>
+            <action android:name="com.vk.silentauth.action.GET_INFO" />
+        </intent>
+    </queries>
+    <application>
+        <activity
+            android:name=".internal.auth.AuthActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="locale|orientation|screenSize|screenLayout|keyboardHidden|fontScale|fontWeightAdjustment|density"
+            android:theme="@style/VKID.Light.Transparent">
+            <meta-data android:name="VKIDClientID" android:value="${VKIDClientID}"/>
+            <meta-data android:name="VKIDClientSecret" android:value="${VKIDClientSecret}"/>
+            <meta-data android:name="VKIDRedirectHost" android:value="${VKIDRedirectHost}"/>
+            <meta-data android:name="VKIDRedirectScheme" android:value="${VKIDRedirectScheme}"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="${VKIDRedirectHost}"
+                    android:scheme="${VKIDRedirectScheme}" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".test.TestAuthProviderActivity" />
+    </application>
 </manifest>

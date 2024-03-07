@@ -9,8 +9,8 @@ package com.mozhimen.authk.vkid.cons
  */
 object CBuild {
     const val SecretsProperties = """
-VKIDClientSecret=xxx //ID приложения
-VKIDClientID=xxx //Защищённый ключ
+VKIDClientSecret=xxxxxxxxxxxx //Защищённый ключ
+VKIDClientID=xxx //ID приложения
     """
 
     const val ManifestPlaceholders = """

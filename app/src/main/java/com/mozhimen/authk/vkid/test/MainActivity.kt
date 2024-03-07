@@ -20,7 +20,12 @@ class MainActivity : BaseActivityVB<ActivityMainBinding>() {
     override fun initView(savedInstanceState: Bundle?) {
         _authKVkidProxy.apply {
             bindLifecycle(this@MainActivity)
+            isAutoAuth(false)
+            initBottomSheet(R.id.main_one_tap_sheet)
+        }
 
+        vb.mainLoginVkid.setOnClickListener {
+            _authKVkidProxy.showBottomSheet()
         }
     }
 }

@@ -41,12 +41,20 @@ class AuthKVKIDOnTapBottomSheet<A>(private var _activity: A?) : BaseWakeBefDestr
         _oneTapBottomSheet?.show()
     }
 
+    fun hideBottomSheet() {
+        _oneTapBottomSheet?.hide()
+    }
+
     /////////////////////////////////////////////////////////////
 
     override fun onResume(owner: LifecycleOwner) {
         super.onResume(owner)
         if (_isAutoAuth)
             showBottomSheet()
+    }
+
+    override fun onPause(owner: LifecycleOwner) {
+        hideBottomSheet()
     }
 
     override fun onDestroy(owner: LifecycleOwner) {

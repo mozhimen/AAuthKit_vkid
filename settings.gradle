@@ -42,3 +42,15 @@ include ':AImageKit_Coil'
 project(':AImageKit_Coil').projectDir = new File("D:\\Workspace\\GitHub\\AImageKit_Coil")
 include ':AImageKit_Coil:imagek_coil'
 include ':AImageKit_Coil:imagek_coil_compose'
+//ANetKit
+include ':ANetKit'
+project(':ANetKit').projectDir = new File("D:\\Workspace\\GitHub\\ANetKit")
+include ':ANetKit:netk_okhttp'
+//AAdaptKit
+include ':AAdaptKit'
+project(':AAdaptKit').projectDir = new File("D:\\Workspace\\GitHub\\AAdaptKit")
+include ':AAdaptKit:adaptk_preference'
+//AWebKit
+include ':AWebKit'
+project(':AWebKit').projectDir = new File("D:\\Workspace\\GitHub\\AWebKit")
+include ':AWebKit:webk_browser'
