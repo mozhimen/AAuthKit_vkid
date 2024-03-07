@@ -61,7 +61,6 @@ import kotlinx.coroutines.launch
  * @param onFail A callback to be invoked upon an error during auth.
  * @param oAuths A set of [OAuth]s the should be displayed to the user.
  */
-@OptIn(ExperimentalStdlibApi::class)
 @Composable
 public fun OAuthListWidget(
     modifier: Modifier = Modifier,

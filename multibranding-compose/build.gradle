@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -28,6 +29,8 @@ android {
     kotlinOptions {
         jvmTarget = '11'
     }
+    buildFeatures.compose = true
+    composeOptions.kotlinCompilerExtensionVersion = "1.5.10"
 }
 
 dependencies {
@@ -35,6 +38,8 @@ dependencies {
     implementation project(':vkid_basic')
     implementation project(':vkid_common')
     implementation project(':multibranding-common')
+
+    kapt 'androidx.compose.compiler:compiler:1.5.10'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
