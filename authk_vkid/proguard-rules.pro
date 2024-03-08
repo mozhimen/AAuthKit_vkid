@@ -19,3 +19,13 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# vkid
+#-keep class com.google.crypto.tink.** { *; }
+#-dontwarn com.my.tracker.**
+#-dontwarn com.vk.**
+#-dontwarn kotlinx.parcelize.Parcelize
+#-dontwarn org.bouncycastle.**
+#-dontwarn org.conscrypt.**
+#-dontwarn org.openjsse.**
+#-dontwarn com.google.errorprone.annotations.Immutable

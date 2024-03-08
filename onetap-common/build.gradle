@@ -30,10 +30,10 @@ android {
 }
 
 dependencies {
-    implementation project(':vkid_common')
-    implementation project(':vkid_basic')
+    implementation project(project.path.replace(project.name, '') +':vkid_common')
+    implementation project(project.path.replace(project.name, '') +':vkid_basic')
     implementation project(':SwiftKit:composek')
-    implementation project(':multibranding-common')
+    implementation project(project.path.replace(project.name, '') +':multibranding-common')
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

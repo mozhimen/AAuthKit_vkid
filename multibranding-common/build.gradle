@@ -30,8 +30,8 @@ android {
 }
 
 dependencies {
-    implementation project(':vkid_basic')
-    implementation project(':vkid_common')
+    implementation project(project.path.replace(project.name, '') +':vkid_basic')
+    implementation project(project.path.replace(project.name, '') +':vkid_common')
     implementation project(':SwiftKit:composek')
 
     testImplementation 'junit:junit:4.13.2'

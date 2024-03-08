@@ -8,7 +8,7 @@ android {
     compileSdk 34
 
     defaultConfig {
-        minSdk 19
+        minSdk 21
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -36,11 +36,11 @@ dependencies {
     implementation project(':SwiftKit:basick')
     implementation project(':SwiftKit:composek')
     implementation project(':AImageKit_Coil:imagek_coil_compose')
-    implementation project(':vkid_basic')
-    implementation project(':vkid_common')
-    implementation project(':onetap-common')
-    implementation project(':multibranding-common')
-    implementation project(':multibranding-compose')
+    implementation project(project.path.replace(project.name, '') +':vkid_basic')
+    implementation project(project.path.replace(project.name, '') +':vkid_common')
+    implementation project(project.path.replace(project.name, '') +':onetap-common')
+    implementation project(project.path.replace(project.name, '') +':multibranding-common')
+    implementation project(project.path.replace(project.name, '') +':multibranding-compose')
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

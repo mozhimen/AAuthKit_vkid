@@ -44,4 +44,8 @@ public class AccessToken(
 
         return true
     }
+
+    override fun toString(): String {
+        return "AccessToken(token='$token', userID=$userID, expireTime=$expireTime, userData=$userData)"
+    }
 }

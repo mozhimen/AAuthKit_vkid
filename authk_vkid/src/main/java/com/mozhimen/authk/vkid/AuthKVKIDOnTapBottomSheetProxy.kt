@@ -1,14 +1,20 @@
 package com.mozhimen.authk.vkid
 
 import android.app.Activity
+import android.util.Log
 import androidx.annotation.IdRes
 import androidx.lifecycle.LifecycleOwner
 import com.mozhimen.authk.vkid.optins.OBuildApp_NeedManifestPlaceholders
 import com.mozhimen.authk.vkid.optins.OBuildApp_NeedSecretsProperties
 import com.mozhimen.basick.elemk.androidx.lifecycle.bases.BaseWakeBefDestroyLifecycleObserver
+import com.mozhimen.basick.elemk.commons.IA_Listener
+import com.mozhimen.basick.elemk.commons.I_Listener
 import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
 import com.mozhimen.basick.lintk.optins.OApiCall_BindViewLifecycle
 import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
+import com.vk.id.AccessToken
+import com.vk.id.VKID
+import com.vk.id.VKIDAuthFail
 import com.vk.id.onetap.xml.OneTapBottomSheet
 
 /**
@@ -23,7 +29,7 @@ import com.vk.id.onetap.xml.OneTapBottomSheet
 @OApiCall_BindViewLifecycle
 @OBuildApp_NeedSecretsProperties
 @OBuildApp_NeedManifestPlaceholders
-class AuthKVKIDOnTapBottomSheet<A>(private var _activity: A?) : BaseWakeBefDestroyLifecycleObserver() where  A : LifecycleOwner, A : Activity {
+class AuthKVKIDOnTapBottomSheetProxy<A>(private var _activity: A?) : BaseWakeBefDestroyLifecycleObserver() where  A : LifecycleOwner, A : Activity {
     private var _oneTapBottomSheet: OneTapBottomSheet? = null
     private var _isAutoAuth: Boolean = false
 
@@ -31,6 +37,7 @@ class AuthKVKIDOnTapBottomSheet<A>(private var _activity: A?) : BaseWakeBefDestr
 
     fun isAutoAuth(boolean: Boolean) {
         _isAutoAuth = boolean
+        Log.d(TAG, "isAutoAuth: $boolean")
     }
 
     fun initBottomSheet(@IdRes intResId: Int) {
@@ -45,10 +52,18 @@ class AuthKVKIDOnTapBottomSheet<A>(private var _activity: A?) : BaseWakeBefDestr
         _oneTapBottomSheet?.hide()
     }
 
+    fun setOnAuthCallback(onSuccess: IA_Listener<AccessToken>, onCancel: I_Listener? = null, onFail: I_Listener? = null) {
+        _oneTapBottomSheet?.setCallbacks(onAuth = onSuccess, onFail = { vkidAuthFail: VKIDAuthFail ->
+            when (vkidAuthFail) {
+                is VKIDAuthFail.Canceled -> onCancel?.invoke()
+                else -> onFail?.invoke()
+            }
+        })
+    }
+
     /////////////////////////////////////////////////////////////
 
     override fun onResume(owner: LifecycleOwner) {
-        super.onResume(owner)
         if (_isAutoAuth)
             showBottomSheet()
     }

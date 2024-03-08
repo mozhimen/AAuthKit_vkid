@@ -42,8 +42,10 @@ android {
 dependencies {
     implementation project(':SwiftKit:basick')
     implementation project(':SwiftKit:composek')
+
+    implementation project(project.path.replace(project.name, '') +':vkid_common')
+
     implementation project(':ANetKit:netk_okhttp')
-    implementation project(':vkid_common')
     implementation project(':AAdaptKit:adaptk_preference')
     implementation project(':AWebKit:webk_browser')
 

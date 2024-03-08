@@ -58,6 +58,10 @@ public class VKIDUser(
 
         return true
     }
+
+    override fun toString(): String {
+        return "VKIDUser(firstName='$firstName', lastName='$lastName', phone=$phone, photo50=$photo50, photo100=$photo100, photo200=$photo200, email=$email)"
+    }
 }
 
 internal fun SilentAuthInfo.toVKIDUser() = VKIDUser(
