@@ -12,6 +12,7 @@ import com.mozhimen.basick.elemk.commons.I_Listener
 import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
 import com.mozhimen.basick.lintk.optins.OApiCall_BindViewLifecycle
 import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
+import com.mozhimen.basick.utilk.android.view.applyOnGlobalLayoutObserver
 import com.vk.id.AccessToken
 import com.vk.id.VKID
 import com.vk.id.VKIDAuthFail
@@ -45,7 +46,7 @@ class AuthKVKIDOnTapBottomSheetProxy<A>(private var _activity: A?) : BaseWakeBef
     }
 
     fun showBottomSheet() {
-        _oneTapBottomSheet?.show()
+        _oneTapBottomSheet?.show().also { Log.d(TAG, "showBottomSheet: ") }
     }
 
     fun hideBottomSheet() {
@@ -63,9 +64,12 @@ class AuthKVKIDOnTapBottomSheetProxy<A>(private var _activity: A?) : BaseWakeBef
 
     /////////////////////////////////////////////////////////////
 
-    override fun onResume(owner: LifecycleOwner) {
-        if (_isAutoAuth)
-            showBottomSheet()
+    override fun onCreate(owner: LifecycleOwner) {
+        if (_isAutoAuth) {
+            _oneTapBottomSheet?.applyOnGlobalLayoutObserver {
+                showBottomSheet()
+            }
+        }
     }
 
     override fun onPause(owner: LifecycleOwner) {
