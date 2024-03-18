@@ -12,9 +12,8 @@ import com.mozhimen.basick.elemk.commons.I_Listener
 import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
 import com.mozhimen.basick.lintk.optins.OApiCall_BindViewLifecycle
 import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
-import com.mozhimen.basick.utilk.android.view.applyOnGlobalLayoutObserver
+import com.mozhimen.basick.utilk.android.view.addAndRemoveOnGlobalLayoutListener
 import com.vk.id.AccessToken
-import com.vk.id.VKID
 import com.vk.id.VKIDAuthFail
 import com.vk.id.onetap.xml.OneTapBottomSheet
 
@@ -66,7 +65,7 @@ class AuthKVKIDOnTapBottomSheetProxy<A>(private var _activity: A?) : BaseWakeBef
 
     override fun onCreate(owner: LifecycleOwner) {
         if (_isAutoAuth) {
-            _oneTapBottomSheet?.applyOnGlobalLayoutObserver {
+            _oneTapBottomSheet?.addAndRemoveOnGlobalLayoutListener {
                 showBottomSheet()
             }
         }
