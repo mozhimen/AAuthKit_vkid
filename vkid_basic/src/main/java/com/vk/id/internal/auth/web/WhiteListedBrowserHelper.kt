@@ -2,6 +2,7 @@ package com.vk.id.internal.auth.web
 
 import android.content.Context
 import android.util.Log
+import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
 
 internal object WhiteListedBrowserHelper {
     private val WHITE_LIST = listOf(
@@ -26,7 +27,7 @@ internal object WhiteListedBrowserHelper {
             }
             if (allBrowsers.isEmpty()) null else allBrowsers[0]
         } catch (e: Exception) {
-            Log.e("BrowserSelector", "Exception in select browser", e)
+            UtilKLogWrapper.e("BrowserSelector", "Exception in select browser", e)
             null
         }
     }

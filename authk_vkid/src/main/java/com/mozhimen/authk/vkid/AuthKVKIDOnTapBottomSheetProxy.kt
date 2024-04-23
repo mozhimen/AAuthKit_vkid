@@ -2,6 +2,7 @@ package com.mozhimen.authk.vkid
 
 import android.app.Activity
 import android.util.Log
+import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
 import androidx.annotation.IdRes
 import androidx.lifecycle.LifecycleOwner
 import com.mozhimen.authk.vkid.optins.OBuildApp_NeedManifestPlaceholders
@@ -37,7 +38,7 @@ class AuthKVKIDOnTapBottomSheetProxy<A>(private var _activity: A?) : BaseWakeBef
 
     fun isAutoAuth(boolean: Boolean) {
         _isAutoAuth = boolean
-        Log.d(TAG, "isAutoAuth: $boolean")
+        UtilKLogWrapper.d(TAG, "isAutoAuth: $boolean")
     }
 
     fun initBottomSheet(@IdRes intResId: Int) {
@@ -45,7 +46,7 @@ class AuthKVKIDOnTapBottomSheetProxy<A>(private var _activity: A?) : BaseWakeBef
     }
 
     fun showBottomSheet() {
-        _oneTapBottomSheet?.show().also { Log.d(TAG, "showBottomSheet: ") }
+        _oneTapBottomSheet?.show().also { UtilKLogWrapper.d(TAG, "showBottomSheet: ") }
     }
 
     fun hideBottomSheet() {

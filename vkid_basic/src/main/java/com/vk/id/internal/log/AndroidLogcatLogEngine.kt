@@ -1,6 +1,6 @@
 package com.vk.id.internal.log
 
-import android.util.Log
+import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
 
 /**
  * [LogEngine] implementation that logs to Android's Logcat.
@@ -13,9 +13,9 @@ internal class AndroidLogcatLogEngine : LogEngine {
         throwable: Throwable?
     ) {
         when (logLevel) {
-            LogEngine.LogLevel.INFO -> Log.i(tag, message)
-            LogEngine.LogLevel.DEBUG -> Log.d(tag, message)
-            LogEngine.LogLevel.ERROR -> Log.e(tag, message, throwable)
+            LogEngine.LogLevel.INFO -> UtilKLogWrapper.i(tag, message)
+            LogEngine.LogLevel.DEBUG -> UtilKLogWrapper.d(tag, message)
+            LogEngine.LogLevel.ERROR -> UtilKLogWrapper.e(tag, message, throwable)
         }
     }
 }
