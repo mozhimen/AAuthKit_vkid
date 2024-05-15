@@ -35,7 +35,7 @@ dependencies {
 
     implementation project(':SwiftKit:basick')
     implementation project(':SwiftKit:composek')
-    implementation project(':AImageKit_Coil:imagek_coil_compose')
+    implementation project(':AImageKit:imagek_coil2_compose')
     implementation project(project.path.replace(project.name, '') +':vkid_basic')
     implementation project(project.path.replace(project.name, '') +':vkid_common')
     implementation project(project.path.replace(project.name, '') +':onetap-common')
