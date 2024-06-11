@@ -54,3 +54,7 @@ include ':AAdaptKit:adaptk_preference'
 include ':AWebKit'
 project(':AWebKit').projectDir = new File("D:\\Workspace\\GitHub\\AWebKit")
 include ':AWebKit:webk_browser'
+//ASerialKit
+include ':ASerialKit'
+project(':ASerialKit').projectDir = new File("D:\\Workspace\\GitHub\\ASerialKit")
+include ':ASerialKit:serialk_gson'
