@@ -12,7 +12,7 @@ import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
 
 class MainActivity : BaseActivityVB<ActivityMainBinding>() {
     @OptIn(OApiInit_ByLazy::class, OApiCall_BindLifecycle::class, OApiCall_BindViewLifecycle::class, OBuildApp_NeedSecretsProperties::class, OBuildApp_NeedManifestPlaceholders::class)
-    private val _authKVkidProxy: AuthKVKIDOnTapBottomSheetProxy<MainActivity> by lazy { AuthKVKIDOnTapBottomSheetProxy(this) }
+    private val _authKVkidProxy: AuthKVKIDOnTapBottomSheetProxy<MainActivity> by lazy_ofNone { AuthKVKIDOnTapBottomSheetProxy(this) }
 
     @OptIn(OApiInit_ByLazy::class, OApiCall_BindLifecycle::class, OApiCall_BindViewLifecycle::class, OBuildApp_NeedSecretsProperties::class, OBuildApp_NeedManifestPlaceholders::class)
     override fun initView(savedInstanceState: Bundle?) {
