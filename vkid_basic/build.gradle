@@ -47,6 +47,7 @@ dependencies {
     implementation project(project.path.replace(project.name, '') +':vkid_common')
 
     implementation project(':ALibKit_Squareup:okhttp3')
+    implementation project(':ALibKit_Squareup:okhttp3_logging_interceptor')
     implementation project(':AAdaptKit:adaptk_preference')
     implementation project(':AWebKit:webk_browser')
 
