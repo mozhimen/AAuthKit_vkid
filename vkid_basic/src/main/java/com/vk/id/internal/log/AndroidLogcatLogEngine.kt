@@ -1,6 +1,6 @@
 package com.vk.id.internal.log
 
-import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
+import com.mozhimen.kotlin.utilk.android.util.UtilKLogWrapper
 
 /**
  * [LogEngine] implementation that logs to Android's Logcat.

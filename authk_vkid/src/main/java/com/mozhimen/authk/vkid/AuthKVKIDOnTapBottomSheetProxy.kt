@@ -2,18 +2,18 @@ package com.mozhimen.authk.vkid
 
 import android.app.Activity
 import android.util.Log
-import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
+import com.mozhimen.kotlin.utilk.android.util.UtilKLogWrapper
 import androidx.annotation.IdRes
 import androidx.lifecycle.LifecycleOwner
 import com.mozhimen.authk.vkid.optins.OBuildApp_NeedManifestPlaceholders
 import com.mozhimen.authk.vkid.optins.OBuildApp_NeedSecretsProperties
-import com.mozhimen.basick.elemk.androidx.lifecycle.bases.BaseWakeBefDestroyLifecycleObserver
-import com.mozhimen.basick.elemk.commons.IA_Listener
-import com.mozhimen.basick.elemk.commons.I_Listener
-import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
-import com.mozhimen.basick.lintk.optins.OApiCall_BindViewLifecycle
-import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
-import com.mozhimen.basick.utilk.android.view.addAndRemoveOnGlobalLayoutListener
+import com.mozhimen.basick.bases.BaseWakeBefDestroyLifecycleObserver
+import com.mozhimen.kotlin.elemk.commons.IA_Listener
+import com.mozhimen.kotlin.elemk.commons.I_Listener
+import com.mozhimen.kotlin.lintk.optins.OApiCall_BindLifecycle
+import com.mozhimen.kotlin.lintk.optins.OApiCall_BindViewLifecycle
+import com.mozhimen.kotlin.lintk.optins.OApiInit_ByLazy
+import com.mozhimen.kotlin.utilk.android.view.addAndRemoveOnGlobalLayoutListener
 import com.vk.id.AccessToken
 import com.vk.id.VKIDAuthFail
 import com.vk.id.onetap.xml.OneTapBottomSheet

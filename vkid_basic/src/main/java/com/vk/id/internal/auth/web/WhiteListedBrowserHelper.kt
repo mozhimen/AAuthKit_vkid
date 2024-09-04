@@ -2,7 +2,7 @@ package com.vk.id.internal.auth.web
 
 import android.content.Context
 import android.util.Log
-import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
+import com.mozhimen.kotlin.utilk.android.util.UtilKLogWrapper
 
 internal object WhiteListedBrowserHelper {
     private val WHITE_LIST = listOf(

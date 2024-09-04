@@ -5,10 +5,10 @@ import com.mozhimen.authk.vkid.AuthKVKIDOnTapBottomSheetProxy
 import com.mozhimen.authk.vkid.optins.OBuildApp_NeedManifestPlaceholders
 import com.mozhimen.authk.vkid.optins.OBuildApp_NeedSecretsProperties
 import com.mozhimen.authk.vkid.test.databinding.ActivityMainBinding
-import com.mozhimen.basick.elemk.androidx.appcompat.bases.viewbinding.BaseActivityVB
-import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
-import com.mozhimen.basick.lintk.optins.OApiCall_BindViewLifecycle
-import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
+import com.mozhimen.mvvmk.bases.activity.viewbinding.BaseActivityVB
+import com.mozhimen.kotlin.lintk.optins.OApiCall_BindLifecycle
+import com.mozhimen.kotlin.lintk.optins.OApiCall_BindViewLifecycle
+import com.mozhimen.kotlin.lintk.optins.OApiInit_ByLazy
 
 class MainActivity : BaseActivityVB<ActivityMainBinding>() {
     @OptIn(OApiInit_ByLazy::class, OApiCall_BindLifecycle::class, OApiCall_BindViewLifecycle::class, OBuildApp_NeedSecretsProperties::class, OBuildApp_NeedManifestPlaceholders::class)
