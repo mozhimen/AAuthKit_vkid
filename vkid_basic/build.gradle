@@ -9,7 +9,7 @@ android {
     compileSdk 34
 
     defaultConfig {
-        minSdk 19
+        minSdk 21
 
 //        buildConfigField("Integer", "CI_BUILD_NUMBER", stringProperty("build.number", "-1"))
 //        buildConfigField("String", "CI_BUILD_TYPE", "\"${stringProperty("build.type")}\"")
