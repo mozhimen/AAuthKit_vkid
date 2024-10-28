@@ -31,6 +31,19 @@ include ':onetap-common'
 include ':multibranding-common'
 include ':multibranding-compose'
 include ':multibranding-xml'
+//ALibKit_Jetpack
+include ':ALibKit_Jetpack'
+project(':ALibKit_Jetpack').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetpack")
+include ':ALibKit_Jetpack:preference'
+//ALibKit_Squareup
+include ':ALibKit_Squareup'
+project(':ALibKit_Squareup').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Squareup")
+include ':ALibKit_Squareup:okhttp3'
+include ':ALibKit_Squareup:okhttp3_logging_interceptor'
+//ALibKit_Google
+include ':ALibKit_Google'
+project(':ALibKit_Google').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Google")
+include ':ALibKit_Google:gson'
 //SwiftKit
 include ':SwiftKit'
 project(':SwiftKit').projectDir = new File("D:\\Workspace\\GitHub\\SwiftKit")
@@ -38,10 +51,9 @@ include ':SwiftKit:basick'
 include ':SwiftKit:xmlk'
 include ':SwiftKit:composek'
 //AImageKit
-include ':AImageKit_Coil'
-project(':AImageKit_Coil').projectDir = new File("D:\\Workspace\\GitHub\\AImageKit_Coil")
-include ':AImageKit_Coil:imagek_coil'
-include ':AImageKit_Coil:imagek_coil_compose'
+include ':AImageKit'
+project(':AImageKit').projectDir = new File("D:\\Workspace\\GitHub\\AImageKit")
+include ':AImageKit:imagek_coil2_compose'
 //ANetKit
 include ':ANetKit'
 project(':ANetKit').projectDir = new File("D:\\Workspace\\GitHub\\ANetKit")
@@ -58,3 +70,8 @@ include ':AWebKit:webk_browser'
 include ':ASerialKit'
 project(':ASerialKit').projectDir = new File("D:\\Workspace\\GitHub\\ASerialKit")
 include ':ASerialKit:serialk_gson'
+//KUtilKit
+include ':KUtilKit'
+project(':KUtilKit').projectDir = new File("D:\\WorkSpace\\GitHub\\KUtilKit")
+include ':KUtilKit:utilk_android'
+include ':KUtilKit:utilk_kotlin'
