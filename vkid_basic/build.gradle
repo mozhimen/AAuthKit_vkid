@@ -23,7 +23,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
@@ -40,8 +40,8 @@ android {
 }
 
 dependencies {
-    implementation project(':SwiftKit:basick')
-    implementation project(':SwiftKit:composek')
+    implementation project(':ASwiftKit:basick')
+    implementation project(':ASwiftKit:composek')
     implementation project(':ASerialKit:serialk_gson')
 
     implementation project(project.path.replace(project.name, '') +':vkid_common')

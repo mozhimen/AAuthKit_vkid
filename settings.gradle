@@ -31,10 +31,15 @@ include ':onetap-common'
 include ':multibranding-common'
 include ':multibranding-compose'
 include ':multibranding-xml'
+//ALibKit_Jetbrains
+include ':ALibKit_Jetbrains'
+project(':ALibKit_Jetbrains').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetbrains")
+include ':ALibKit_Jetbrains:kotlin_stdlib'
 //ALibKit_Jetpack
 include ':ALibKit_Jetpack'
 project(':ALibKit_Jetpack').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetpack")
 include ':ALibKit_Jetpack:preference'
+include ':ALibKit_Jetpack:browser'
 //ALibKit_Squareup
 include ':ALibKit_Squareup'
 project(':ALibKit_Squareup').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Squareup")
@@ -44,12 +49,12 @@ include ':ALibKit_Squareup:okhttp3_logging_interceptor'
 include ':ALibKit_Google'
 project(':ALibKit_Google').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Google")
 include ':ALibKit_Google:gson'
-//SwiftKit
-include ':SwiftKit'
-project(':SwiftKit').projectDir = new File("D:\\Workspace\\GitHub\\SwiftKit")
-include ':SwiftKit:basick'
-include ':SwiftKit:xmlk'
-include ':SwiftKit:composek'
+//ASwiftKit
+include ':ASwiftKit'
+project(':ASwiftKit').projectDir = new File("D:\\Workspace\\GitHub\\ASwiftKit")
+include ':ASwiftKit:basick'
+include ':ASwiftKit:xmlk'
+include ':ASwiftKit:composek'
 //AImageKit
 include ':AImageKit'
 project(':AImageKit').projectDir = new File("D:\\Workspace\\GitHub\\AImageKit")
@@ -65,6 +70,7 @@ include ':AAdaptKit:adaptk_preference'
 //AWebKit
 include ':AWebKit'
 project(':AWebKit').projectDir = new File("D:\\Workspace\\GitHub\\AWebKit")
+include ':AWebKit:webk_basic'
 include ':AWebKit:webk_browser'
 //ASerialKit
 include ':ASerialKit'
