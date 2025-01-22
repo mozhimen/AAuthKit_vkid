@@ -30,7 +30,7 @@ android {
 }
 
 dependencies {
-    implementation project(':vkid_basic')
+    implementation project(':basic')
     implementation project(':multibranding-common')
     implementation project(':multibranding-compose')
     implementation project(':ASwiftKit:composek')

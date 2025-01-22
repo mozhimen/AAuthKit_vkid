@@ -34,8 +34,8 @@ android {
 
 dependencies {
     implementation project(':ASwiftKit:composek')
-    implementation project(project.path.replace(project.name, '') +':vkid_basic')
-    implementation project(project.path.replace(project.name, '') +':vkid_common')
+    implementation project(project.path.replace(project.name, '') +':basic')
+    implementation project(project.path.replace(project.name, '') +':common')
     implementation project(project.path.replace(project.name, '') +':multibranding-common')
 
     kapt 'androidx.compose.compiler:compiler:1.5.10'
