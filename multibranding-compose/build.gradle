@@ -29,7 +29,7 @@ android {
         jvmTarget = '11'
     }
     buildFeatures.compose = true
-    composeOptions.kotlinCompilerExtensionVersion = "1.5.10"
+    composeOptions.kotlinCompilerExtensionVersion = "1.5.15"
 }
 
 dependencies {
@@ -38,7 +38,7 @@ dependencies {
     implementation project(project.path.replace(project.name, '') +':common')
     implementation project(project.path.replace(project.name, '') +':multibranding-common')
 
-    kapt 'androidx.compose.compiler:compiler:1.5.10'
+    kapt 'androidx.compose.compiler:compiler:1.5.15'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
