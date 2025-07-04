@@ -42,7 +42,7 @@ android {
 dependencies {
     implementation project(':ASwiftKit:basick')
     implementation project(':ASwiftKit:composek')
-    implementation project(':ASerialKit:gson')
+    implementation project(':ASerialKit:json:gson')
 
     implementation project(project.path.replace(project.name, '') +':common')
 
