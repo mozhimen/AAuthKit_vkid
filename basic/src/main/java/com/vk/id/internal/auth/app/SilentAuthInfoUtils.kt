@@ -65,7 +65,7 @@ internal object SilentAuthInfoUtils {
             context.packageManager
                 .getPackageInfo(pkg, PackageManager.GET_SIGNATURES)
                 .signatures
-                .firstOrNull()
+                ?.firstOrNull()
                 ?.let {
                     transform(it)
                 }

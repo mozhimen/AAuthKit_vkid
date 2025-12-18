@@ -65,6 +65,8 @@ include ':ASwiftKit'
 project(':ASwiftKit').projectDir = new File("D:\\Workspace\\GitHub\\ASwiftKit")
 include ':ASwiftKit:basick'
 include ':ASwiftKit:xmlk'
+include ':ASwiftKit:uik'
+include ':ASwiftKit:uik:databinding'
 include ':ASwiftKit:composek'
 //AImageKit
 include ':AImageKit'
@@ -86,4 +88,4 @@ include ':AWebKit:browser'
 //ASerialKit
 include ':ASerialKit'
 project(':ASerialKit').projectDir = new File("D:\\Workspace\\GitHub\\ASerialKit")
-include ':ASerialKit:gson'
+include ':ASerialKit:json:gson'

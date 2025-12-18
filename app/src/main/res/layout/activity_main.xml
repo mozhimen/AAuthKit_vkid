@@ -7,7 +7,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/main_login_vkid"
-        style="@style/StyleK_MaterialBtn"
+        style="@style/StyleK_BtnK_Material"
         android:layout_width="match_parent"
         android:text="vkid登录"
         app:layout_constraintTop_toTopOf="parent"

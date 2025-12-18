@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.mozhimen.authk.vkid.test'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.mozhimen.authk.vkid.test"
@@ -40,12 +40,15 @@ android {
     buildFeatures{
         viewBinding true
     }
+    buildFeatures.compose = true
+    composeOptions.kotlinCompilerExtensionVersion = "1.5.15"
 }
 
 dependencies {
-
     implementation project(':ASwiftKit:basick')
     implementation project(':ASwiftKit:xmlk')
+    implementation project(':ASwiftKit:composek')
+    implementation project(':ASwiftKit:uik:databinding')
     implementation project(':authk_vkid')
 
     testImplementation 'junit:junit:4.13.2'

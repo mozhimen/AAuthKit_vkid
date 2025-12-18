@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.material.ripple.rememberRipple
+import androidx.compose.material3.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -166,7 +167,9 @@ private fun OAuthButton(
             .clip(style.cornersStyle)
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
-                indication = rememberRipple(
+                indication = /*rememberRipple(
+                    color = style.rippleStyle.asColor(),
+                )*/ripple(
                     color = style.rippleStyle.asColor(),
                 ),
                 role = Role.Button,

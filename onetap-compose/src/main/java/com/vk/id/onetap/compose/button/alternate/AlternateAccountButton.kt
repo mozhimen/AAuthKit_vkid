@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.material.ripple.rememberRipple
+import androidx.compose.material3.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -102,9 +103,13 @@ private fun AlternateAccountButton(
             .background(style.backgroundStyle)
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
-                indication = rememberRipple(
+                indication = /*rememberRipple(
                     color = style.rippleStyle.asColor(),
-                ),
+                )*/
+                    ripple(
+                        color = style.rippleStyle.asColor(),
+                    )
+                ,
                 onClick = onClick
             ),
         contentAlignment = Alignment.Center

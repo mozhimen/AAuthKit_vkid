@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.material.ripple.rememberRipple
+import androidx.compose.material3.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -81,9 +82,12 @@ private fun RepeatButton(style: AlternateAccountButtonStyle, repeatClicked: () -
             .background(style.backgroundStyle)
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
-                indication = rememberRipple(
+                indication = /*rememberRipple(
                     color = style.rippleStyle.asColor(),
-                ),
+                )*/
+                    ripple(
+                        color = style.rippleStyle.asColor(),
+                    ) ,
                 onClick = repeatClicked
             ),
         contentAlignment = Alignment.Center

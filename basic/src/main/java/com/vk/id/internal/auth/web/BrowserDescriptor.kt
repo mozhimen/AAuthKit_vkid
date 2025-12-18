@@ -65,8 +65,8 @@ constructor(
      */
     constructor(packageInfo: PackageInfo, useCustomTab: Boolean) : this(
         packageInfo.packageName,
-        generateSignatureHashes(packageInfo.signatures),
-        packageInfo.versionName,
+        generateSignatureHashes(packageInfo.signatures ?: emptyArray()),
+        packageInfo.versionName ?: "",
         useCustomTab
     )
 

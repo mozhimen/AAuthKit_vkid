@@ -9,6 +9,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.material.ripple.rememberRipple
+import androidx.compose.material3.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.State
@@ -27,6 +28,7 @@ import com.vk.id.VKIDAuthFail
 import com.vk.id.VKIDUser
 import com.vk.id.auth.VKIDAuthParams
 import com.vk.id.common.InternalVKIDApi
+import com.vk.id.onetap.common.auth.style.VKIDButtonRippleStyle
 import com.vk.id.onetap.common.auth.style.VKIDButtonStyle
 import com.vk.id.onetap.compose.button.auth.style.asColor
 import kotlinx.coroutines.CoroutineScope
@@ -41,9 +43,13 @@ internal fun Modifier.clickable(
 ): Modifier = composed {
     clickable(
         interactionSource = remember { MutableInteractionSource() },
-        indication = rememberRipple(
+        indication = /*rememberRipple(
             color = style.rippleStyle.asColor(),
-        ),
+        )*/
+            ripple(
+                color = VKIDButtonRippleStyle.DARK.asColor(),
+            )
+        ,
         role = Role.Button,
         onClick = onClick
     )
