@@ -35,7 +35,7 @@ dependencies {
 
     implementation project(':ASwiftKit:basick')
     implementation project(':ASwiftKit:composek')
-    implementation project(':AImageKit:coil2:compose')
+    implementation 'com.github.mozhimen.ANetKit:coil2-compose:0.0.2'
     implementation project(project.path.replace(project.name, '') +':basic')
     implementation project(project.path.replace(project.name, '') +':common')
     implementation project(project.path.replace(project.name, '') +':onetap-common')
