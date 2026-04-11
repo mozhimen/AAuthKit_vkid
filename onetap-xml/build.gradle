@@ -32,8 +32,8 @@ android {
 }
 
 dependencies {
-    implementation project(':ASwiftKit:basick')
-    implementation project(':ASwiftKit:composek')
+    implementation 'com.github.mozhimen.ASwiftKit:basick:2.0.4'
+    implementation 'com.github.mozhimen.ASwiftKit:composek:2.0.4'
     implementation project(project.path.replace(project.name, '') +':basic')
     implementation project(project.path.replace(project.name, '') +':common')
     implementation project(project.path.replace(project.name, '') +':onetap-compose')
