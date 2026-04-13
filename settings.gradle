@@ -1,7 +1,10 @@
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        google()
+        mavenCentral()
         mavenLocal()
+        maven { url "https://jitpack.io" }
         maven {url("https://artifactory-external.vkpartner.ru/artifactory/vkid-sdk-andorid/")}
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
@@ -13,10 +16,7 @@ dependencyResolutionManagement {
         maven { url 'https://gitee.com/liuchaoya/libcommon/raw/master/repository/' }
         maven { url "https://repo.eclipse.org/content/repositories/paho-snapshots/" }
         maven { url 'https://developer.huawei.com/repo/' }
-        maven { url "https://jitpack.io" }
         maven { url 'https://www.jitpack.io' }
-        mavenCentral()
-        google()
     }
 }
 
@@ -31,52 +31,3 @@ include ':onetap-common'
 include ':multibranding-common'
 include ':multibranding-compose'
 include ':multibranding-xml'
-//ALibKit_Google
-include ':ALibKit_Google'
-project(':ALibKit_Google').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Google")
-include ':ALibKit_Google:material'
-include ':ALibKit_Google:gson'
-//ALibKit_Jetbrains
-include ':ALibKit_Jetbrains'
-project(':ALibKit_Jetbrains').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetbrains")
-include ':ALibKit_Jetbrains:kotlin_stdlib'
-include ':ALibKit_Jetbrains:kotlinx_coroutines'
-//KUtilKit
-include ':KUtilKit'
-project(':KUtilKit').projectDir = new File("D:\\WorkSpace\\GitHub\\KUtilKit")
-include ':KUtilKit:android'
-include ':KUtilKit:kotlin'
-//ALibKit_Squareup
-include ':ALibKit_Squareup'
-project(':ALibKit_Squareup').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Squareup")
-include ':ALibKit_Squareup:okhttp3'
-include ':ALibKit_Squareup:okhttp3_logging_interceptor'
-//ASwiftKit
-include ':ASwiftKit'
-project(':ASwiftKit').projectDir = new File("D:\\Workspace\\GitHub\\ASwiftKit")
-include ':ASwiftKit:basick'
-include ':ASwiftKit:xmlk'
-include ':ASwiftKit:uik'
-include ':ASwiftKit:uik:databinding'
-include ':ASwiftKit:composek'
-//AImageKit
-include ':AImageKit'
-project(':AImageKit').projectDir = new File("D:\\Workspace\\GitHub\\AImageKit")
-include ':AImageKit:coil2:compose'
-//ANetKit
-include ':ANetKit'
-project(':ANetKit').projectDir = new File("D:\\Workspace\\GitHub\\ANetKit")
-include ':ANetKit:netk_okhttp'
-//AAdaptKit
-include ':AAdaptKit'
-project(':AAdaptKit').projectDir = new File("D:\\Workspace\\GitHub\\AAdaptKit")
-include ':AAdaptKit:preference'
-//AWebKit
-include ':AWebKit'
-project(':AWebKit').projectDir = new File("D:\\Workspace\\GitHub\\AWebKit")
-include ':AWebKit:basic'
-include ':AWebKit:browser'
-//ASerialKit
-include ':ASerialKit'
-project(':ASerialKit').projectDir = new File("D:\\Workspace\\GitHub\\ASerialKit")
-include ':ASerialKit:json:gson'

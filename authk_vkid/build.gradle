@@ -34,7 +34,6 @@ android {
 }
 
 dependencies {
-
     implementation 'com.github.mozhimen.ASwiftKit:basick:2.1.6'
     api project(project.path.replace(project.name, '') +':onetap-xml')
     api project(project.path.replace(project.name, '') +':basic')
